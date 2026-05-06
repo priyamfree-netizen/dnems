@@ -128,3 +128,14 @@ School ERP Software is a comprehensive platform built with Laravel 11, designed 
         "spatie/laravel-medialibrary": "^11.0",
         "spatie/laravel-pdf": "^1.5",
         "spatie/laravel-permission": "^6.9"
+
+
+C:\laragon\bin\php\php-8.3.30-Win32-vs16-x64\php.exe artisan serve --host=127.0.0.1 --port=8000
+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
+
+Super Admin	superadmin@gmail.com / 123456
+SAAS Admin	saasadmin@gmail.com / 123456
+
+cd C:\laragon\www\school\web-app-desktop-code-v1.6
+flutter pub get
+flutter run -d chrome

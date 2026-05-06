@@ -20,7 +20,7 @@ class AppConstants {
   static const int versionCode = 6;
   static const String currency = "USD";
   static const String chatGptApiKey = 'your ApiKey';
-  static const String baseUrl = 'http://127.0.0.1:8000'; //Set Your api base url Here
+  static const String baseUrl = 'https://ems.dninfo.online'; //Set Your api base url Here
   static const String imageBaseUrl = '$baseUrl/storage';
   /// Get the current institute domain dynamically
   static String get instituteDomain => DomainHelper.getCurrentDomain();
