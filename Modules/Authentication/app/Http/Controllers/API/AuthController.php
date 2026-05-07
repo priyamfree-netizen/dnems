@@ -58,10 +58,14 @@ class AuthController extends Controller
         $user = User::where('email', $request->email)->first();
 
         if (! $user || ! Hash::check($request->password, $user->password)) {
-            return $this->responseError([], 'The provided credentials are incorrect..');
+            return $this->responseError([], 'The provided credentials are incorrect..', 401);
         }
 
-        $accessToken = $user->createToken('app')->accessToken;
+        try {
+            $accessToken = $user->createToken('app')->accessToken;
+        } catch (Exception $e) {
+            return $this->responseError([], 'Token generation failed: ' . $e->getMessage(), 500);
+        }
 
         return $this->responseSuccess([
             'user' => $user,
