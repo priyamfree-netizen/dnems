@@ -29,7 +29,7 @@ return Application::configure(basePath: dirname(__DIR__))
             'check.subscription' => CheckSubscription::class,
         ]);
 
-        $middleware->append([
+        $middleware->prepend([
             HandleCors::class,
         ]);
     })
